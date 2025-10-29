@@ -13,6 +13,15 @@ const Navigation = () => {
             <a href="#catalog" className="hover:text-muted-foreground transition-colors">
               Каталог
             </a>
+            <a href="#cards" className="hover:text-muted-foreground transition-colors">
+              Подарочные карты
+            </a>
+            <a href="#lookbook" className="hover:text-muted-foreground transition-colors">
+              Lookbook
+            </a>
+            <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer" className="hover:text-muted-foreground transition-colors">
+              Телеграмм блог
+            </a>
           </div>
           
           <div className="flex items-center gap-4">
