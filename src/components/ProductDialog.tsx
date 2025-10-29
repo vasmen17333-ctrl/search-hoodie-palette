@@ -6,7 +6,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { Send } from "lucide-react";
+import { Send, ArrowLeft } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -24,7 +24,6 @@ import {
 interface Product {
   id: number;
   color: string;
-  title: string;
   meaning: string;
   image: string;
   price: string;
@@ -52,9 +51,17 @@ const ProductDialog = ({ product, open, onOpenChange }: ProductDialogProps) => {
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto animate-scale-in">
+        <Button
+          variant="ghost"
+          size="icon"
+          className="md:hidden absolute left-4 top-4 z-10"
+          onClick={() => onOpenChange(false)}
+        >
+          <ArrowLeft className="h-5 w-5" />
+        </Button>
         <DialogHeader>
           <DialogTitle className="text-2xl font-light">
-            {product.color} — {product.title}
+            {product.color}
           </DialogTitle>
           <DialogDescription className="text-base">
             {product.meaning}

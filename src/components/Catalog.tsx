@@ -13,7 +13,6 @@ const hoodies = [
   {
     id: 1,
     color: "Black",
-    title: "Сила",
     meaning: "Вдохновлён беззвёздной ночью и глубиной вулканических пород. Этот оттенок передаёт внутреннюю мощь и спокойную решимость.",
     image: blackHoodie,
     price: "16,000 ₽",
@@ -25,7 +24,6 @@ const hoodies = [
   {
     id: 2,
     color: "White",
-    title: "Свобода",
     meaning: "Вдохновлён светом утреннего рассвета и чистотой зимнего воздуха. Этот оттенок символизирует новое начало, внутреннюю ясность и спокойствие.",
     image: whiteHoodie,
     price: "16,000 ₽",
@@ -37,7 +35,6 @@ const hoodies = [
   {
     id: 3,
     color: "Grey",
-    title: "Баланс",
     meaning: "Вдохновлён утренним туманом и мягкой рассеянной светотенью. Этот оттенок — воплощение тишины и гармонии.",
     image: greyHoodie,
     price: "16,000 ₽",
@@ -49,7 +46,6 @@ const hoodies = [
   {
     id: 4,
     color: "Graphite",
-    title: "Уверенность",
     meaning: "Вдохновлён глубиной природного камня и монолитной эстетикой городской архитектуры. Этот оттенок передаёт сдержанную силу и спокойную уверенность.",
     image: graphiteHoodie,
     price: "16,000 ₽",
@@ -61,7 +57,6 @@ const hoodies = [
   {
     id: 5,
     color: "Dune",
-    title: "Тепло",
     meaning: "Вдохновлён оранжевыми песками и бликами заходящего солнца. Этот оттенок воплощает естественное тепло, движение и энергию простора.",
     image: duneHoodie,
     price: "16,000 ₽",
@@ -73,7 +68,6 @@ const hoodies = [
   {
     id: 6,
     color: "Milkshake",
-    title: "Нежность",
     meaning: "Вдохновлён кремовыми тонами молочного шоколада и мягким рассеянным светом. Этот оттенок передаёт спокойствие, тепло и тактильную уютность.",
     image: milkshakeHoodie,
     price: "16,000 ₽",
@@ -121,13 +115,13 @@ const Catalog = () => {
               <div className="aspect-square overflow-hidden bg-card mb-4 rounded-lg transition-shadow duration-300 group-hover:shadow-lg">
                 <img
                   src={hoodie.image}
-                  alt={`Премиум худи search ${hoodie.color} — ${hoodie.title}`}
+                  alt={`Премиум худи search ${hoodie.color}`}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
               </div>
               <div className="space-y-3">
                 <div className="space-y-1">
-                  <h3 className="text-lg font-medium">{hoodie.color} — {hoodie.title}</h3>
+                  <h3 className="text-lg font-medium">{hoodie.color}</h3>
                   <p className="text-sm text-muted-foreground">{hoodie.meaning}</p>
                   <p className="text-base font-medium">{hoodie.price}</p>
                 </div>
