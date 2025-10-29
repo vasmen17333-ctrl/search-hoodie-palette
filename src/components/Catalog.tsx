@@ -102,7 +102,7 @@ const Catalog = () => {
     <section id="catalog" className="py-20 px-6 md:px-12 animate-fade-in">
       <div className="max-w-7xl mx-auto">
         <div className="mb-16">
-          <h2 className="text-3xl md:text-5xl font-light mb-6 tracking-tight">Каталог</h2>
+          <h2 className="text-3xl md:text-5xl font-display tracking-wider mb-6 uppercase">Каталог</h2>
           <div className="space-y-2">
             <h3 className="text-xl md:text-2xl font-light">История натуральных цветов</h3>
             <p className="text-base text-muted-foreground max-w-2xl">

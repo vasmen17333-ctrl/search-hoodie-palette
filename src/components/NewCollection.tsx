@@ -14,7 +14,7 @@ const NewCollection = () => {
               <span className="text-sm tracking-wider uppercase text-muted-foreground mb-4 block">
                 Новая коллекция
               </span>
-              <h2 className="text-3xl md:text-5xl font-light mb-6 tracking-tight">
+              <h2 className="text-3xl md:text-5xl font-display tracking-wider mb-6 uppercase">
                 Mocha Mousse
               </h2>
               <p className="text-lg text-muted-foreground mb-4">
