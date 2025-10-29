@@ -1,6 +1,10 @@
 import mochaHoodie from "@/assets/mocha-hoodie-model.jpg";
 
 const NewCollection = () => {
+  const handleTelegramClick = () => {
+    window.open("https://t.me/yourusername", "_blank");
+  };
+
   return (
     <section id="new" className="py-20 px-6 md:px-12 bg-muted/30 animate-fade-in">
       <div className="max-w-7xl mx-auto">
@@ -24,7 +28,10 @@ const NewCollection = () => {
                 <span className="text-2xl font-medium">16 000 ₽</span>
                 <span className="text-sm text-muted-foreground">Предзаказ</span>
               </div>
-              <button className="px-8 py-3 bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 hover:scale-105 text-sm tracking-wide uppercase">
+              <button 
+                onClick={handleTelegramClick}
+                className="px-8 py-3 bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 hover:scale-105 text-sm tracking-wide uppercase"
+              >
                 Оформить предзаказ
               </button>
             </div>
