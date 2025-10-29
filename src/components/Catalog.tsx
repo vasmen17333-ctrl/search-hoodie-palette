@@ -121,7 +121,7 @@ const Catalog = () => {
               </div>
               <div className="space-y-3">
                 <div className="space-y-1">
-                  <h3 className="text-lg font-medium">{hoodie.color}</h3>
+                  <h3 className="text-lg font-medium">Оверсайз худи в цвете {hoodie.color}</h3>
                   <p className="text-sm text-muted-foreground">{hoodie.meaning}</p>
                   <p className="text-base font-medium">{hoodie.price}</p>
                 </div>
