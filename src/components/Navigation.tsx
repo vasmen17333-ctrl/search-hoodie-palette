@@ -1,4 +1,4 @@
-import { Search, Heart, ShoppingBag } from "lucide-react";
+import { Search } from "lucide-react";
 
 const Navigation = () => {
   return (
@@ -13,26 +13,11 @@ const Navigation = () => {
             <a href="#catalog" className="hover:text-muted-foreground transition-colors">
               Каталог
             </a>
-            <a href="#new" className="hover:text-muted-foreground transition-colors">
-              Новая коллекция
-            </a>
-            <a href="#lookbook" className="hover:text-muted-foreground transition-colors">
-              Lookbook
-            </a>
-            <a href="#cards" className="hover:text-muted-foreground transition-colors">
-              Подарочные карты
-            </a>
           </div>
           
           <div className="flex items-center gap-4">
             <button className="p-2 hover:text-muted-foreground transition-colors">
               <Search className="w-5 h-5" />
-            </button>
-            <button className="p-2 hover:text-muted-foreground transition-colors">
-              <Heart className="w-5 h-5" />
-            </button>
-            <button className="p-2 hover:text-muted-foreground transition-colors">
-              <ShoppingBag className="w-5 h-5" />
             </button>
           </div>
         </div>

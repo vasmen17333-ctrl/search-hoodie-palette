@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Send } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import whiteHoodie from "@/assets/white-hoodie-stack.jpg";
 import blackHoodie from "@/assets/black-hoodie-stack.jpg";
 import greyHoodie from "@/assets/grey-hoodie-stack.jpg";
@@ -91,6 +93,11 @@ const Catalog = () => {
     setIsDialogOpen(true);
   };
 
+  const handleTelegramClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    window.open("https://t.me/yourusername", "_blank");
+  };
+
   return (
     <section id="catalog" className="py-20 px-6 md:px-12">
       <div className="max-w-7xl mx-auto">
@@ -118,10 +125,20 @@ const Catalog = () => {
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
-              <div className="space-y-1">
-                <h3 className="text-lg font-medium">{hoodie.color} — {hoodie.title}</h3>
-                <p className="text-sm text-muted-foreground">{hoodie.meaning}</p>
-                <p className="text-base font-medium">{hoodie.price}</p>
+              <div className="space-y-3">
+                <div className="space-y-1">
+                  <h3 className="text-lg font-medium">{hoodie.color} — {hoodie.title}</h3>
+                  <p className="text-sm text-muted-foreground">{hoodie.meaning}</p>
+                  <p className="text-base font-medium">{hoodie.price}</p>
+                </div>
+                <Button 
+                  onClick={handleTelegramClick}
+                  className="w-full"
+                  size="sm"
+                >
+                  <Send className="mr-2 h-4 w-4" />
+                  Оформить предзаказ
+                </Button>
               </div>
             </div>
           ))}

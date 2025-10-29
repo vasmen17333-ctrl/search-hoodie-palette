@@ -1,7 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Catalog from "@/components/Catalog";
-import NewCollection from "@/components/NewCollection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -11,7 +10,6 @@ const Index = () => {
       <main>
         <Hero />
         <Catalog />
-        <NewCollection />
       </main>
       <Footer />
     </div>
