@@ -1,5 +1,11 @@
+import { useState } from "react";
+import BrandStoryDialog from "./BrandStoryDialog";
+
 const Footer = () => {
+  const [isBrandStoryOpen, setIsBrandStoryOpen] = useState(false);
+
   return (
+    <>
     <footer className="border-t border-border py-12 px-6 md:px-12 animate-fade-in">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
@@ -16,7 +22,14 @@ const Footer = () => {
           <div>
             <h3 className="text-sm font-display font-light tracking-[0.2em] mb-4 uppercase">О бренде</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="#" className="hover:text-foreground transition-all duration-300">История</a></li>
+              <li>
+                <button 
+                  onClick={() => setIsBrandStoryOpen(true)}
+                  className="hover:text-foreground transition-all duration-300"
+                >
+                  История
+                </button>
+              </li>
               <li><a href="#" className="hover:text-foreground transition-all duration-300">Производство</a></li>
               <li><a href="#" className="hover:text-foreground transition-all duration-300">Устойчивость</a></li>
               <li><a href="#" className="hover:text-foreground transition-all duration-300">Контакты</a></li>
@@ -42,6 +55,12 @@ const Footer = () => {
         </div>
       </div>
     </footer>
+    
+    <BrandStoryDialog 
+      open={isBrandStoryOpen}
+      onOpenChange={setIsBrandStoryOpen}
+    />
+    </>
   );
 };
 
