@@ -99,7 +99,7 @@ const Catalog = () => {
   };
 
   return (
-    <section id="catalog" className="py-20 px-6 md:px-12">
+    <section id="catalog" className="py-20 px-6 md:px-12 animate-fade-in">
       <div className="max-w-7xl mx-auto">
         <div className="mb-16">
           <h2 className="text-3xl md:text-5xl font-light mb-6 tracking-tight">Каталог</h2>
@@ -115,14 +115,14 @@ const Catalog = () => {
           {hoodies.map((hoodie) => (
             <div 
               key={hoodie.id} 
-              className="group cursor-pointer"
+              className="group cursor-pointer transition-all duration-300 hover:scale-[1.02]"
               onClick={() => handleProductClick(hoodie)}
             >
-              <div className="aspect-square overflow-hidden bg-card mb-4 rounded-lg">
+              <div className="aspect-square overflow-hidden bg-card mb-4 rounded-lg transition-shadow duration-300 group-hover:shadow-lg">
                 <img
                   src={hoodie.image}
                   alt={`Премиум худи search ${hoodie.color} — ${hoodie.title}`}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
               </div>
               <div className="space-y-3">

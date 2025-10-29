@@ -36,7 +36,7 @@ const ProductDialog = ({ product, open, onOpenChange }: ProductDialogProps) => {
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-3xl">
+      <DialogContent className="max-w-3xl animate-scale-in">
         <DialogHeader>
           <DialogTitle className="text-2xl font-light">
             {product.color} — {product.title}

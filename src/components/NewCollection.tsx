@@ -2,7 +2,7 @@ import mochaHoodie from "@/assets/mocha-hoodie-model.jpg";
 
 const NewCollection = () => {
   return (
-    <section id="new" className="py-20 px-6 md:px-12 bg-muted/30">
+    <section id="new" className="py-20 px-6 md:px-12 bg-muted/30 animate-fade-in">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1">
@@ -21,10 +21,10 @@ const NewCollection = () => {
                 что сделал search культовым брендом для тех, кто ценит качество.
               </p>
               <div className="flex items-baseline gap-4 mb-8">
-                <span className="text-2xl font-medium">13 500 ₽</span>
+                <span className="text-2xl font-medium">16 000 ₽</span>
                 <span className="text-sm text-muted-foreground">Предзаказ</span>
               </div>
-              <button className="px-8 py-3 bg-primary text-primary-foreground hover:bg-primary/90 transition-colors text-sm tracking-wide uppercase">
+              <button className="px-8 py-3 bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 hover:scale-105 text-sm tracking-wide uppercase">
                 Оформить предзаказ
               </button>
             </div>
