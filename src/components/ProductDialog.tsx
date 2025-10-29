@@ -50,7 +50,7 @@ const ProductDialog = ({ product, open, onOpenChange }: ProductDialogProps) => {
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto animate-scale-in">
+      <DialogContent className="w-[calc(100vw-2rem)] max-w-4xl max-h-[90vh] overflow-y-auto overflow-x-hidden animate-scale-in">
         <Button
           variant="ghost"
           size="icon"
