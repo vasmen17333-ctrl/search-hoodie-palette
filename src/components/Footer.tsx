@@ -1,8 +1,10 @@
 import { useState } from "react";
 import BrandStoryDialog from "./BrandStoryDialog";
+import GiftCardDialog from "./GiftCardDialog";
 
 const Footer = () => {
   const [isBrandStoryOpen, setIsBrandStoryOpen] = useState(false);
+  const [isGiftCardOpen, setIsGiftCardOpen] = useState(false);
 
   return (
     <>
@@ -28,6 +30,14 @@ const Footer = () => {
                   className="hover:text-foreground transition-all duration-300"
                 >
                   История
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => setIsGiftCardOpen(true)}
+                  className="hover:text-foreground transition-all duration-300"
+                >
+                  Подарочные карты
                 </button>
               </li>
               <li><a href="#" className="hover:text-foreground transition-all duration-300">Производство</a></li>
@@ -59,6 +69,11 @@ const Footer = () => {
     <BrandStoryDialog 
       open={isBrandStoryOpen}
       onOpenChange={setIsBrandStoryOpen}
+    />
+    
+    <GiftCardDialog 
+      open={isGiftCardOpen}
+      onOpenChange={setIsGiftCardOpen}
     />
     </>
   );

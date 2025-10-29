@@ -4,6 +4,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import SearchDialog from "./SearchDialog";
 import ProductDialog from "./ProductDialog";
 import BrandStoryDialog from "./BrandStoryDialog";
+import GiftCardDialog from "./GiftCardDialog";
 import whiteHoodie from "@/assets/white-hoodie-stack.jpg";
 import blackHoodie from "@/assets/black-hoodie-stack.jpg";
 import greyHoodie from "@/assets/grey-hoodie-stack.jpg";
@@ -86,6 +87,7 @@ const Navigation = () => {
   const [isProductDialogOpen, setIsProductDialogOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isBrandStoryOpen, setIsBrandStoryOpen] = useState(false);
+  const [isGiftCardOpen, setIsGiftCardOpen] = useState(false);
 
   const handleProductSelect = (product: typeof hoodies[0]) => {
     setSelectedProduct(product);
@@ -115,9 +117,12 @@ const Navigation = () => {
             >
               История
             </button>
-            <a href="#cards" className="hover:text-muted-foreground transition-colors font-display font-light tracking-[0.15em] uppercase">
+            <button 
+              onClick={() => setIsGiftCardOpen(true)}
+              className="hover:text-muted-foreground transition-colors font-display font-light tracking-[0.15em] uppercase"
+            >
               Подарочные карты
-            </a>
+            </button>
             <a href="#lookbook" className="hover:text-muted-foreground transition-colors font-display font-light tracking-[0.15em] uppercase">
               Lookbook
             </a>
@@ -158,13 +163,15 @@ const Navigation = () => {
                   >
                     История
                   </button>
-                  <a 
-                    href="#cards" 
-                    onClick={closeMobileMenu}
-                    className="text-lg font-display font-light tracking-[0.15em] uppercase hover:text-muted-foreground transition-colors"
+                  <button 
+                    onClick={() => {
+                      closeMobileMenu();
+                      setTimeout(() => setIsGiftCardOpen(true), 300);
+                    }}
+                    className="text-lg font-display font-light tracking-[0.15em] uppercase hover:text-muted-foreground transition-colors text-left"
                   >
                     Подарочные карты
-                  </a>
+                  </button>
                   <a 
                     href="#lookbook" 
                     onClick={closeMobileMenu}
@@ -206,6 +213,11 @@ const Navigation = () => {
     <BrandStoryDialog 
       open={isBrandStoryOpen}
       onOpenChange={setIsBrandStoryOpen}
+    />
+    
+    <GiftCardDialog 
+      open={isGiftCardOpen}
+      onOpenChange={setIsGiftCardOpen}
     />
     </>
   );
