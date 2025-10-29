@@ -17,6 +17,12 @@ export default {
         sans: ['Oswald', 'ui-sans-serif', 'system-ui', '-apple-system', 'sans-serif'],
         display: ['Oswald', 'Impact', 'sans-serif'],
       },
+      fontWeight: {
+        normal: '300',
+        medium: '300',
+        semibold: '300',
+        bold: '400',
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
