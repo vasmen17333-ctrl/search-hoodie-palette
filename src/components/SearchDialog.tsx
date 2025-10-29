@@ -11,7 +11,6 @@ import { Search } from "lucide-react";
 interface Product {
   id: number;
   color: string;
-  title: string;
   meaning: string;
   image: string;
   price: string;
@@ -29,7 +28,6 @@ const SearchDialog = ({ open, onOpenChange, products, onProductSelect }: SearchD
 
   const filteredProducts = products.filter(product =>
     product.color.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    product.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
     product.meaning.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
@@ -74,7 +72,7 @@ const SearchDialog = ({ open, onOpenChange, products, onProductSelect }: SearchD
                     />
                   </div>
                   <div className="flex-1">
-                    <h4 className="font-medium">{product.color} — {product.title}</h4>
+                    <h4 className="font-medium">{product.color}</h4>
                     <p className="text-sm text-muted-foreground">{product.meaning}</p>
                     <p className="text-sm font-medium mt-1">{product.price}</p>
                   </div>
