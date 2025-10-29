@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'sans-serif'],
+        sans: ['Oswald', 'ui-sans-serif', 'system-ui', '-apple-system', 'sans-serif'],
         display: ['Oswald', 'Impact', 'sans-serif'],
       },
       colors: {
