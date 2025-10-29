@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Search } from "lucide-react";
+import { Search, Menu } from "lucide-react";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import SearchDialog from "./SearchDialog";
 import whiteHoodie from "@/assets/white-hoodie-stack.jpg";
 import blackHoodie from "@/assets/black-hoodie-stack.jpg";
@@ -87,10 +88,15 @@ const Navigation = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState<typeof hoodies[0] | null>(null);
   const [isProductDialogOpen, setIsProductDialogOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const handleProductSelect = (product: typeof hoodies[0]) => {
     setSelectedProduct(product);
     setIsProductDialogOpen(true);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
   };
 
   return (
@@ -120,10 +126,53 @@ const Navigation = () => {
           <div className="flex items-center gap-4">
             <button 
               onClick={() => setIsSearchOpen(true)}
-              className="p-2 hover:text-muted-foreground transition-colors"
+              className="hidden md:block p-2 hover:text-muted-foreground transition-colors"
             >
               <Search className="w-5 h-5" />
             </button>
+            
+            <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
+              <SheetTrigger asChild>
+                <button className="md:hidden p-2 hover:text-muted-foreground transition-colors">
+                  <Menu className="w-5 h-5" />
+                </button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-[280px]">
+                <nav className="flex flex-col gap-6 mt-8">
+                  <a 
+                    href="#catalog" 
+                    onClick={closeMobileMenu}
+                    className="text-lg font-display font-light tracking-[0.15em] uppercase hover:text-muted-foreground transition-colors"
+                  >
+                    Каталог
+                  </a>
+                  <a 
+                    href="#cards" 
+                    onClick={closeMobileMenu}
+                    className="text-lg font-display font-light tracking-[0.15em] uppercase hover:text-muted-foreground transition-colors"
+                  >
+                    Подарочные карты
+                  </a>
+                  <a 
+                    href="#lookbook" 
+                    onClick={closeMobileMenu}
+                    className="text-lg font-display font-light tracking-[0.15em] uppercase hover:text-muted-foreground transition-colors"
+                  >
+                    Lookbook
+                  </a>
+                  <button 
+                    onClick={() => {
+                      setIsSearchOpen(true);
+                      closeMobileMenu();
+                    }}
+                    className="text-lg font-display font-light tracking-[0.15em] uppercase hover:text-muted-foreground transition-colors text-left flex items-center gap-2"
+                  >
+                    <Search className="w-5 h-5" />
+                    Поиск
+                  </button>
+                </nav>
+              </SheetContent>
+            </Sheet>
           </div>
         </div>
       </div>
