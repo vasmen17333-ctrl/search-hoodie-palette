@@ -152,7 +152,7 @@ const Navigation = () => {
                   <button 
                     onClick={() => {
                       closeMobileMenu();
-                      setTimeout(() => setIsBrandStoryOpen(true), 100);
+                      setTimeout(() => setIsBrandStoryOpen(true), 300);
                     }}
                     className="text-lg font-display font-light tracking-[0.15em] uppercase hover:text-muted-foreground transition-colors text-left"
                   >
