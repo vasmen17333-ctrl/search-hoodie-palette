@@ -116,9 +116,8 @@ const ProductDialog = ({ product, open, onOpenChange }: ProductDialogProps) => {
           <AccordionItem value="description">
             <AccordionTrigger>Описание</AccordionTrigger>
             <AccordionContent>
-              <p className="text-sm text-muted-foreground">
-                Премиум худи из плотного 100% хлопка с уникальным оттенком, вдохновлённым природными элементами. 
-                Каждая деталь продумана для комфорта и долговечности.
+              <p className="text-sm text-muted-foreground whitespace-pre-line">
+                {product.description}
               </p>
             </AccordionContent>
           </AccordionItem>
