@@ -3,6 +3,7 @@ import { Search, Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import SearchDialog from "./SearchDialog";
 import ProductDialog from "./ProductDialog";
+import BrandStoryDialog from "./BrandStoryDialog";
 import whiteHoodie from "@/assets/white-hoodie-stack.jpg";
 import blackHoodie from "@/assets/black-hoodie-stack.jpg";
 import greyHoodie from "@/assets/grey-hoodie-stack.jpg";
@@ -84,6 +85,7 @@ const Navigation = () => {
   const [selectedProduct, setSelectedProduct] = useState<typeof hoodies[0] | null>(null);
   const [isProductDialogOpen, setIsProductDialogOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isBrandStoryOpen, setIsBrandStoryOpen] = useState(false);
 
   const handleProductSelect = (product: typeof hoodies[0]) => {
     setSelectedProduct(product);
@@ -107,6 +109,12 @@ const Navigation = () => {
             <a href="#catalog" className="hover:text-muted-foreground transition-colors font-display font-light tracking-[0.15em] uppercase">
               Каталог
             </a>
+            <button 
+              onClick={() => setIsBrandStoryOpen(true)}
+              className="hover:text-muted-foreground transition-colors font-display font-light tracking-[0.15em] uppercase"
+            >
+              История
+            </button>
             <a href="#cards" className="hover:text-muted-foreground transition-colors font-display font-light tracking-[0.15em] uppercase">
               Подарочные карты
             </a>
@@ -141,6 +149,15 @@ const Navigation = () => {
                   >
                     Каталог
                   </a>
+                  <button 
+                    onClick={() => {
+                      setIsBrandStoryOpen(true);
+                      closeMobileMenu();
+                    }}
+                    className="text-lg font-display font-light tracking-[0.15em] uppercase hover:text-muted-foreground transition-colors text-left"
+                  >
+                    История
+                  </button>
                   <a 
                     href="#cards" 
                     onClick={closeMobileMenu}
@@ -184,6 +201,11 @@ const Navigation = () => {
       product={selectedProduct}
       open={isProductDialogOpen}
       onOpenChange={setIsProductDialogOpen}
+    />
+    
+    <BrandStoryDialog 
+      open={isBrandStoryOpen}
+      onOpenChange={setIsBrandStoryOpen}
     />
     </>
   );
