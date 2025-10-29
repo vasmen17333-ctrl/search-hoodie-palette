@@ -4,7 +4,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           <div>
-            <h3 className="text-sm font-display tracking-[0.2em] mb-4 uppercase">Помощь</h3>
+            <h3 className="text-sm font-display font-light tracking-[0.2em] mb-4 uppercase">Помощь</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li><a href="#" className="hover:text-foreground transition-all duration-300">Доставка</a></li>
               <li><a href="#" className="hover:text-foreground transition-all duration-300">Возврат</a></li>
@@ -14,7 +14,7 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-sm font-display tracking-[0.2em] mb-4 uppercase">О бренде</h3>
+            <h3 className="text-sm font-display font-light tracking-[0.2em] mb-4 uppercase">О бренде</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li><a href="#" className="hover:text-foreground transition-all duration-300">История</a></li>
               <li><a href="#" className="hover:text-foreground transition-all duration-300">Производство</a></li>
@@ -24,7 +24,7 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-sm font-display tracking-[0.2em] mb-4 uppercase">Следите</h3>
+            <h3 className="text-sm font-display font-light tracking-[0.2em] mb-4 uppercase">Следите</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li><a href="#" className="hover:text-foreground transition-all duration-300">Instagram</a></li>
               <li><a href="#" className="hover:text-foreground transition-all duration-300">Telegram</a></li>
