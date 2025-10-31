@@ -43,7 +43,7 @@ const ProductDialog = ({ product, open, onOpenChange }: ProductDialogProps) => {
   if (!product) return null;
 
   const handleTelegramClick = () => {
-    window.open("https://t.me/yourusername", "_blank");
+    window.open("https://t.me/crossbounds88", "_blank");
   };
 
   const carouselImages = [product.image, product.image, product.image, product.image];

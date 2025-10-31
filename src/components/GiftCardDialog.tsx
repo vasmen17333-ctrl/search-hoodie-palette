@@ -15,7 +15,7 @@ const GiftCardDialog = ({ open, onOpenChange }: GiftCardDialogProps) => {
 
   const handleOrder = () => {
     const message = `Хочу оформить подарочный сертификат на сумму ${selectedAmount}₽`;
-    const telegramUrl = `https://t.me/yourusername?text=${encodeURIComponent(message)}`;
+    const telegramUrl = `https://t.me/crossbounds88?text=${encodeURIComponent(message)}`;
     window.open(telegramUrl, '_blank');
   };
 
@@ -23,12 +23,6 @@ const GiftCardDialog = ({ open, onOpenChange }: GiftCardDialogProps) => {
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
         <div className="space-y-8 py-6">
-          <img 
-            src={giftCardImage} 
-            alt="Подарочная карта" 
-            className="w-full h-auto rounded-lg"
-          />
-          
           <div className="text-center space-y-6">
             <h2 className="text-2xl font-display font-light tracking-[0.15em] uppercase">
               Подарочный Сертификат
@@ -63,6 +57,12 @@ const GiftCardDialog = ({ open, onOpenChange }: GiftCardDialogProps) => {
               Оформить заказ в Телеграмм
             </Button>
           </div>
+          
+          <img 
+            src={giftCardImage} 
+            alt="Подарочная карта" 
+            className="w-full h-auto rounded-lg"
+          />
         </div>
       </DialogContent>
     </Dialog>

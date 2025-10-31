@@ -126,7 +126,7 @@ const Navigation = () => {
             <a href="#lookbook" className="hover:text-muted-foreground transition-colors font-display font-light tracking-[0.15em] uppercase">
               Lookbook
             </a>
-            <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer" className="hover:text-muted-foreground transition-colors font-display font-light tracking-[0.15em] uppercase">
+            <a href="https://t.me/crossbounds88" target="_blank" rel="noopener noreferrer" className="hover:text-muted-foreground transition-colors font-display font-light tracking-[0.15em] uppercase">
               Телеграмм блог
             </a>
           </div>

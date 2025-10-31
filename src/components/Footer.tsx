@@ -42,15 +42,14 @@ const Footer = () => {
               </li>
               <li><a href="#" className="hover:text-foreground transition-all duration-300">Производство</a></li>
               <li><a href="#" className="hover:text-foreground transition-all duration-300">Устойчивость</a></li>
-              <li><a href="#" className="hover:text-foreground transition-all duration-300">Контакты</a></li>
+              <li><a href="#" className="hover:text-foreground transition-all duration-300">Рекомендации по уходу</a></li>
             </ul>
           </div>
           
           <div>
             <h3 className="text-sm font-display font-light tracking-[0.2em] mb-4 uppercase">Следите</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="#" className="hover:text-foreground transition-all duration-300">Instagram</a></li>
-              <li><a href="#" className="hover:text-foreground transition-all duration-300">Telegram</a></li>
+              <li><a href="https://t.me/crossbounds88" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-all duration-300">Telegram</a></li>
               <li><a href="#" className="hover:text-foreground transition-all duration-300">VK</a></li>
             </ul>
           </div>
