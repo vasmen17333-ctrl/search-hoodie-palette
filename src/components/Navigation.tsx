@@ -5,6 +5,7 @@ import SearchDialog from "./SearchDialog";
 import ProductDialog from "./ProductDialog";
 import BrandStoryDialog from "./BrandStoryDialog";
 import GiftCardDialog from "./GiftCardDialog";
+import LookbookDialog from "./LookbookDialog";
 import whiteHoodie from "@/assets/white-hoodie-stack.jpg";
 import blackHoodie from "@/assets/black-hoodie-stack.jpg";
 import greyHoodie from "@/assets/grey-hoodie-stack.jpg";
@@ -88,6 +89,7 @@ const Navigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isBrandStoryOpen, setIsBrandStoryOpen] = useState(false);
   const [isGiftCardOpen, setIsGiftCardOpen] = useState(false);
+  const [isLookbookOpen, setIsLookbookOpen] = useState(false);
 
   const handleProductSelect = (product: typeof hoodies[0]) => {
     setSelectedProduct(product);
@@ -123,9 +125,12 @@ const Navigation = () => {
             >
               Подарочные карты
             </button>
-            <a href="#lookbook" className="hover:text-muted-foreground transition-colors font-display font-light tracking-[0.15em] uppercase">
+            <button 
+              onClick={() => setIsLookbookOpen(true)}
+              className="hover:text-muted-foreground transition-colors font-display font-light tracking-[0.15em] uppercase"
+            >
               Lookbook
-            </a>
+            </button>
             <a href="https://t.me/crossbounds88" target="_blank" rel="noopener noreferrer" className="hover:text-muted-foreground transition-colors font-display font-light tracking-[0.15em] uppercase">
               Телеграмм блог
             </a>
@@ -172,13 +177,15 @@ const Navigation = () => {
                   >
                     Подарочные карты
                   </button>
-                  <a 
-                    href="#lookbook" 
-                    onClick={closeMobileMenu}
-                    className="text-lg font-display font-light tracking-[0.15em] uppercase hover:text-muted-foreground transition-colors"
+                  <button 
+                    onClick={() => {
+                      closeMobileMenu();
+                      setTimeout(() => setIsLookbookOpen(true), 300);
+                    }}
+                    className="text-lg font-display font-light tracking-[0.15em] uppercase hover:text-muted-foreground transition-colors text-left"
                   >
                     Lookbook
-                  </a>
+                  </button>
                   <button 
                     onClick={() => {
                       setIsSearchOpen(true);
@@ -218,6 +225,11 @@ const Navigation = () => {
     <GiftCardDialog 
       open={isGiftCardOpen}
       onOpenChange={setIsGiftCardOpen}
+    />
+    
+    <LookbookDialog 
+      open={isLookbookOpen}
+      onOpenChange={setIsLookbookOpen}
     />
     </>
   );
