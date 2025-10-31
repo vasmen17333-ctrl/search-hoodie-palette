@@ -89,7 +89,7 @@ const Catalog = () => {
 
   const handleTelegramClick = (e: React.MouseEvent) => {
     e.stopPropagation();
-    window.open("https://t.me/yourusername", "_blank");
+    window.open("https://t.me/crossbounds88", "_blank");
   };
 
   return (
